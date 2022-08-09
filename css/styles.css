@@ -140,6 +140,7 @@ body {
 
 .menu-link {
   display: block;
+  position: relative;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.33;
@@ -163,6 +164,18 @@ body {
 
 .menu-link.current {
   color: var(--accent-color);
+}
+
+.menu-link.current::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 .header-contacts {
